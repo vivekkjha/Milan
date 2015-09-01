@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 import com.unite.milan.framework.view.controller.iface.IViewControllerListener;
 import com.unite.milan.helper.actionbar.ActionBarHelper;
@@ -19,6 +20,7 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
     @Override
     public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
         super.onCreate(savedInstanceState, persistentState);
+        
     }
     /**
      * It is called from onStart of the {@link Activity} to update action bar
