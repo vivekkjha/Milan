@@ -37,6 +37,8 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
 
     protected abstract int getLayoutId();
 
+    protected abstract void initializeViews(Bundle bundle);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,7 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
         View contentView = getLayoutInflater().inflate(getLayoutId(), null);
         contentLayout.addView(contentView);
         initActionBar();
+        initializeViews(getIntent().getExtras());
     }
 
     @Override
