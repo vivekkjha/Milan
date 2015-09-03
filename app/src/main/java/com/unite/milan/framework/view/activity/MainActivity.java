@@ -14,7 +14,7 @@ import com.unite.milan.R;
 public class MainActivity extends BaseActivityWithoutSlider {
 
     @Override
-    protected void updateActionBarViews() {
+    protected void updateToolBarViews() {
 
     }
 
@@ -43,7 +43,6 @@ public class MainActivity extends BaseActivityWithoutSlider {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
         int id = item.getItemId();
         if(id == android.R.id.home)
         {
@@ -52,7 +51,6 @@ public class MainActivity extends BaseActivityWithoutSlider {
                 getmDrawerLayout().openDrawer(GravityCompat.START);
             }
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

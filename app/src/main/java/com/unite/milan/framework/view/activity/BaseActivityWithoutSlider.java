@@ -38,7 +38,7 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
      * It is called from onStart of the {@link Activity} to update action bar
      * views.
      */
-    protected abstract void updateActionBarViews();
+    protected abstract void updateToolBarViews();
 
     protected abstract void updateViewsOnSuccess(Object object);
 
@@ -52,12 +52,11 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_content_frame);
-
         FrameLayout contentLayout = (FrameLayout) findViewById(R.id.content_detail);
         int id = getLayoutId();
         View contentView = getLayoutInflater().inflate(id, null);
         contentLayout.addView(contentView);
-        initActionBar();
+        initToolBar();
         initializeViews(getIntent().getExtras());
         setupDrawer();
     }
@@ -86,17 +85,14 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
             });
         }
     }
-    protected void initActionBar() {
+    protected void initToolBar() {
 
         //> add toolbar of material design as action bar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
         if(getSupportActionBar()!=null) {
-
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setHomeAsUpIndicator(getResources().getDrawable(R.mipmap.ic_launcher)); //TODO: add menu icon
-
             mActionBarHelper = new ActionBarHelper(this, getSupportActionBar());
             mActionBarHelper.initActionBarWithCustomView();
         }
@@ -125,8 +121,6 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
                     @Override
                     public boolean onNavigationItemSelected(MenuItem menuItem) {
                         menuItem.setChecked(true);
-
-
                         Toast.makeText(BaseActivityWithoutSlider.this, "Hello : " + menuItem.getTitle().toString(), Toast.LENGTH_SHORT).show();
                         mDrawerLayout.closeDrawers();
                         return true;
