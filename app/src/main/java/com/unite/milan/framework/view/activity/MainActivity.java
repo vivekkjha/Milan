@@ -35,5 +35,8 @@ public class MainActivity extends BaseActivityWithoutSlider {
     @Override
     protected void initializeViews(Bundle bundle) {
         // get reference of all views here.
+
+
+
     }
 }

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/nav_tracking"
+            android:title="@string/lost_someone"
+            android:icon="@mipmap/ic_launcher"
+            />
+        <item android:id="@+id/nav_being_tracked"
+            android:title="@string/found_someone"
+            android:icon="@mipmap/ic_launcher"
+            />
+        <item android:id="@+id/nav_friends"
+            android:title="@string/lost_around"
+            android:icon="@mipmap/ic_launcher"
+            />
+        <item android:id="@+id/nav_notifications"
+            android:title="@string/notifications"
+            android:icon="@mipmap/ic_launcher"
+            />
+    </group>
+
+    <item android:title="@string/more">
+        <menu>
+
+            <item android:title="@string/feedback"
+                android:icon="@mipmap/ic_launcher"
+                android:id="@+id/nav_track_settings"/>
+            <item android:title="@string/about_us"
+                android:icon="@mipmap/ic_launcher"
+                android:id="@+id/nav_map_settings"/>
+            <item android:title="@string/share"
+                android:icon="@mipmap/ic_launcher"
+                android:id="@+id/nav_share_settings"/>
+        </menu>
+
+
+    </item>
+
+</menu>

@@ -3,4 +3,17 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- Navigation Drawer -->
+
+    <string name="lost_someone">Lost Someone</string>
+    <string name="found_someone">Found Someone</string>
+    <string name="lost_around">Lost Around</string>
+    <string name="notifications">Notifications</string>
+
+    <string name="more">More</string>
+    <string name="feedback">Feedback</string>
+    <string name="about_us">About us</string>
+    <string name="share">Share</string>
+
 </resources>

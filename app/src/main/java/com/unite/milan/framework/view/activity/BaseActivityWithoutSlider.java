@@ -3,8 +3,8 @@ package com.unite.milan.framework.view.activity;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.PersistableBundle;
-import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Toast;
@@ -43,6 +43,7 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.base_content_frame);
+
         FrameLayout contentLayout = (FrameLayout) findViewById(R.id.content_detail);
         View contentView = getLayoutInflater().inflate(getLayoutId(), null);
         contentLayout.addView(contentView);
@@ -75,9 +76,19 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
         }
     }
     protected void initActionBar() {
-        getSupportActionBar().setBackgroundDrawable(null);
-        mActionBarHelper = new ActionBarHelper(this, getSupportActionBar());
-        mActionBarHelper.initActionBarWithCustomView();
+
+        //> add toolbar of material design as action bar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
+        if(getSupportActionBar()!=null) {
+
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            getSupportActionBar().setBackgroundDrawable(getResources().getDrawable(R.mipmap.ic_launcher)); //TODO: add menu icon
+
+            mActionBarHelper = new ActionBarHelper(this, getSupportActionBar());
+            mActionBarHelper.initActionBarWithCustomView();
+        }
     }
 
 }
