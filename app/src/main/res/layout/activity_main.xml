@@ -42,8 +42,9 @@
             android:layout_marginBottom="@dimen/large_margin"
             android:orientation="horizontal"
             android:gravity="center"
-            android:background="@drawable/selector_main_button"
             android:padding="@dimen/medium_padding"
+            android:clickable="true"
+            android:background="@drawable/selector_main_button"
             android:layout_height="wrap_content">
 
             <ImageView
@@ -67,6 +68,7 @@
             android:layout_marginStart="@dimen/large_margin"
             android:layout_marginRight="@dimen/large_margin"
             android:layout_marginEnd="@dimen/large_margin"
+            android:clickable="true"
             android:orientation="horizontal"
             android:gravity="center"
             android:background="@drawable/selector_main_button"
@@ -85,18 +87,6 @@
                 android:textSize="@dimen/xx_large_txt_size"
                 android:text="@string/found_someone"/>
 
-
         </LinearLayout>
-
-
-
-
-
-
-
     </LinearLayout>
-
-
-
-
 </LinearLayout>
