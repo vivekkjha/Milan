@@ -24,8 +24,6 @@ import com.unite.milan.helper.actionbar.ActionBarHelper;
 public abstract class BaseActivityWithoutSlider extends AppCompatActivity implements IViewControllerListener {
 
     private ActionBarHelper mActionBarHelper;
-
-
     private DrawerLayout mDrawerLayout;
 
 

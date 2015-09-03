@@ -29,6 +29,4 @@
         app:theme="@style/ToolBarStyle"
         android:layout_height="wrap_content"/>
 
-
-
 </android.support.design.widget.CoordinatorLayout>
