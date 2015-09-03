@@ -5,8 +5,11 @@ import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.unite.milan.R;
 import com.unite.milan.framework.view.controller.iface.IViewControllerListener;
 import com.unite.milan.helper.actionbar.ActionBarHelper;
 
@@ -37,6 +40,10 @@ public abstract class BaseActivityWithoutSlider extends AppCompatActivity implem
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.base_content_frame);
+        FrameLayout contentLayout = (FrameLayout) findViewById(R.id.content_detail);
+        View contentView = getLayoutInflater().inflate(getLayoutId(), null);
+        contentLayout.addView(contentView);
         initActionBar();
     }
 
